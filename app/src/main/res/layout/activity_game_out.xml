@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".GameOut">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="restart"
+            android:background="@drawable/restart" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="exit"
+            android:background="@drawable/exit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivNewHighest"
+            android:layout_width="116dp"
+            android:layout_height="176dp"
+            android:background="@drawable/juara" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Point Kamu: "
+                    android:textStyle="bold"
+                    android:textColor="@color/merah"
+                    android:textSize="24sp"
+                    android:layout_gravity="center|right" />
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="109dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kenney_blocks"
+                    android:text="50"
+                    android:textColor="@color/black"
+                    android:textSize="50sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skor Tertinggi: "
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/merah"
+                    android:layout_gravity="center|right" />
+
+                <TextView
+                    android:id="@+id/Highest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/kenney_blocks"
+                    android:text="100"
+
+                    android:textColor="@color/merah"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="80dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
